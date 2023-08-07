@@ -13,6 +13,16 @@ WINDOW *initNcurses() {
 	refresh();
 	
 	box(win, 0, 0);
+	char *title = "TITLE: Run for your life!";
+	mvwprintw(win, 1, (WIDTH-strlen(title))/2, "%s", title);
+	char *instruction = "Instructions:";
+	char *instruction1 = "Press 'w' to Jump!";
+	char *instruction2 = "Press 'd' to Punch!";
+	char *instruction3 = "Press 'q' to Quit!";
+	mvwprintw(win, HEIGHT-3, (WIDTH-strlen(instruction))/2, "%s", instruction);
+	mvwprintw(win, HEIGHT-2, (WIDTH-strlen(instruction1))/2, "%s", instruction1);
+	mvwprintw(win, HEIGHT-1, (WIDTH-strlen(instruction2))/2, "%s", instruction2);
+	mvwprintw(win, HEIGHT, (WIDTH-strlen(instruction3))/2, "%s", instruction3);
 	char *intro = "Press any key to start...";
 	mvwprintw(win, HEIGHT/2, (WIDTH-strlen(intro))/2, "%s", intro);
 	wrefresh(win);

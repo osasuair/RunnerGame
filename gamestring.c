@@ -166,7 +166,7 @@ void addScore(char **str, long int score, long int highScore) {
 
 /* 
     Function:  gameOverString
-     Purpose:  add "WOULD YOU LIKE TO PLAY AGAIN? Type 'q' to QUIT." to string array
+     Purpose:  add "TYPE 'q' to QUIT, PRESS ANY KEY TO START AGAIN." to string array
       in/out:  string array with game over string added
 */
 void gameOverString(char **str) {
